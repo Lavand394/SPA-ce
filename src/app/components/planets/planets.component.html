@@ -1,1 +1,16 @@
-<p>planets works!</p>
+<h1> Planets<small class="text-muted"> Solar system</small></h1>
+<hr>
+
+<div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let planet of planets; let i = index">
+    <img [src]="planet.img" class="card-img-top" [alt]="planet.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{planet.name}}</h5>
+      <p class="card-text">{{planet.bio}}</p>
+      <p class="card-text">Discovery: <small class="text-muted">{{planet.dis}}</small></p>
+      <button (click)="showPlanet(i)" type="button" name="button" class="btn btn-outline-dark btn-sm btn-block">
+        See more...
+      </button>
+    </div>
+  </div>
+</div>

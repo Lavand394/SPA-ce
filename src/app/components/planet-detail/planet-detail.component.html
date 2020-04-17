@@ -1,0 +1,15 @@
+<div class="card border-secondary animated fadeIn" style="width:100%;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{planet.img}}" class="card-img" alt="{{planet.name}}">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{planet.name}}</h5>
+        <p class="card-text">{{planet.bio}}</p>
+        <p class="card-text">Discovery:<small class="text-muted">{{planet.dis}}</small></p>
+            <a (click)="getBack()" class="btn  btn-outline-dark btn-block">Get back</a>
+      </div>
+    </div>
+  </div>
+</div>
