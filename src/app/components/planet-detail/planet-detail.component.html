@@ -5,9 +5,9 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title">{{planet.name}}</h5>
+        <h5 class="card-title">{{planet.name  | uppercase}}</h5>
         <p class="card-text">{{planet.bio}}</p>
-        <p class="card-text">Discovery:<small class="text-muted">{{planet.dis}}</small></p>
+        <p class="card-text">Discovery: <small class="text-muted">{{planet.dis}}</small></p>
             <a (click)="getBack()" class="btn  btn-outline-dark btn-block">Get back</a>
       </div>
     </div>

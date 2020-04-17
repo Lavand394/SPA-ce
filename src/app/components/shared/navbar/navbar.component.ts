@@ -11,4 +11,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+
+searchPlanet(searchText:string){
+
+  console.log(searchText)
+}
 }

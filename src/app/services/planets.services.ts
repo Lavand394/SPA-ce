@@ -28,7 +28,7 @@ export class PlanetsService {
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       img: "assets/images/earth.png",
       dis: "02 A.C.",
-        system: "Solar"
+      system: "Solar"
     },
     {
       name: "Mars",
@@ -49,7 +49,7 @@ export class PlanetsService {
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       img: "assets/images/jupiter.png",
       dis: "369 A.C.",
-        system: "Solar"
+      system: "Solar"
     },
     {
       name: "Saturn",
@@ -94,11 +94,23 @@ export class PlanetsService {
 
   }
 
-  getPlanets()  {
+  getPlanets() {
     return this.planets;
   }
-  getPlanet(idx:number)  {
+  getPlanet(idx: number) {
     return this.planets[idx];
+  }
+  searchPlanets(searchText: string) {
+    let planetsArr: Planet[] = [];
+    searchText = searchText.toLowerCase();
+
+    for (let planet of this.planets) {
+      let name = planet.name.toLowerCase();
+      if (name.indexOf(searchText) >= 0) {
+        planetsArr.push(planet)
+      }
+    }
+    return planetsArr;
   }
 
 }
