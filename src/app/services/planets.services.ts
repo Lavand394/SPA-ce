@@ -89,7 +89,6 @@ export class PlanetsService {
     }
   ];
 
-
   constructor() {
 
   }
@@ -100,6 +99,7 @@ export class PlanetsService {
   getPlanet(idx: number) {
     return this.planets[idx];
   }
+
   searchPlanets(searchText: string) {
     let planetsArr: Planet[] = [];
     searchText = searchText.toLowerCase();
