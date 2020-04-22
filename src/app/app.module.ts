@@ -12,6 +12,7 @@ import { AboutComponent } from './components/about/about.component';
 import { PlanetsComponent } from './components/planets/planets.component';
 import { PlanetDetailComponent } from './components/planet-detail/planet-detail.component';
 import { PlanetSearchedComponent } from './components/planet-searched/planet-searched.component';
+import { PlanetCardComponent } from './components/planet-card/planet-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PlanetSearchedComponent } from './components/planet-searched/planet-sea
     AboutComponent,
     PlanetsComponent,
     PlanetDetailComponent,
-    PlanetSearchedComponent
+    PlanetSearchedComponent,
+    PlanetCardComponent
   ],
   imports: [
     BrowserModule,

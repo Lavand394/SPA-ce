@@ -3,21 +3,11 @@
 <hr>
 
 <div class="alert alert-secondary" role="alert" *ngIf="planetsArr.length == 0">
-  <h4 class="alert-heading">Sorry, no records were found!</h4>
-  <p>Aww yeah, we're sorry, no records were found: <mark> "{{searchText}}" </mark> try once again.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use the search component properly.</p>
+    <h4 class="alert-heading">Sorry, no records were found!</h4>
+    <p>Aww yeah, we're sorry, no records were found: <mark> "{{searchText}}" </mark> try once again.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use the search component properly.</p>
 </div>
 <div class="card-columns ">
-  <div class="card animated fadeIn fast" *ngFor="let planet of planetsArr; let i = index">
-    <img [src]="planet.img" class="card-img-top" [alt]="planet.nombre">
-    <div class="card-body">
-      <h5 class="card-title">{{planet.name}}</h5>
-      <p class="card-text">{{planet.bio}}</p>
-      <p class="card-text">Discovery: <small class="text-muted">{{planet.dis}}</small></p>
-      <button (click)="showPlanet(i)" type="button" name="button" class="btn btn-outline-dark btn-sm btn-block">
-        See more...
-      </button>
-    </div>
-  </div>
+    <app-planet-card [planet]="planet" [idx]="i" *ngFor="let planet of planetsArr; let i = index"></app-planet-card>
 </div>
