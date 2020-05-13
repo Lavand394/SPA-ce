@@ -19,8 +19,7 @@ export class PlanetCardComponent implements OnInit {
   }
 
   showPlanet() {
-this.planetSelected.emit(this.idx)
-    // this._router.navigate(['/planet-detail', this.idx]);
+      this._router.navigate(['/planet-detail', this.idx]);
   }
 
 }

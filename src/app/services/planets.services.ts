@@ -4,7 +4,8 @@ export interface Planet {
   bio: string,
   img: string,
   dis: string,
-  system: string
+  system: string,
+  idx?:number;
 }
 @Injectable()
 export class PlanetsService {
@@ -103,10 +104,13 @@ export class PlanetsService {
   searchPlanets(searchText: string) {
     let planetsArr: Planet[] = [];
     searchText = searchText.toLowerCase();
+    for (let i = 0; i < this.planets.length; i++) {
+      let planet = this.planets[i];
 
-    for (let planet of this.planets) {
+
       let name = planet.name.toLowerCase();
       if (name.indexOf(searchText) >= 0) {
+        planet.idx=i;
         planetsArr.push(planet)
       }
     }
