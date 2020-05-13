@@ -9,5 +9,5 @@
     <p class="mb-0">Whenever you need to, be sure to use the search component properly.</p>
 </div>
 <div class="card-columns ">
-    <app-planet-card [planet]="planet" [idx]="i" *ngFor="let planet of planetsArr; let i = index"></app-planet-card>
+    <app-planet-card [planet]="planet" [idx]="planet.idx" *ngFor="let planet of planetsArr"></app-planet-card>
 </div>
